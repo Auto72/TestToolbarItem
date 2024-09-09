@@ -11,7 +11,7 @@ public partial class MainPage : ContentPage
 
     private void OnCounterClicked(object sender, EventArgs e)
     {
-        CounterBtn.Text = $"Clicked {++_count} time{(_count == 1 ? "" : "s")}";
+        CounterBtn.Text = $"Clicked {++_count} time{(_count > 1 ? "s" : "")}";
         SemanticScreenReader.Announce(CounterBtn.Text);
     }
 }
